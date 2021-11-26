@@ -8,6 +8,7 @@ import Generics from './generics/Generics';
 import { Greet } from './props/Greet';
 import { Person } from './props/Person';
 import { PersonList } from './props/PersonList';
+import { UseRef } from './useRef/UseRef';
 
 function App() {
   const personName = {
@@ -46,6 +47,8 @@ function App() {
 
       {/*Props components
     Passing different types of  Props */}
+    <h1 className="text-success">Props </h1>
+    <hr/>
       <h2 className="text-primary">From Greet Component</h2>
       <Greet name='Vishwajit' messageCount={10} isLoggedIn={true} />
       <hr />
@@ -58,7 +61,7 @@ function App() {
       {/*End of generics of props component */}
      
       {/* Context */}
-      <h2 className="text-primary">Context </h2>
+      <h2 className="text-success">Context </h2>
       <UserContextProvider>
         <User />
       </UserContextProvider>
@@ -66,9 +69,16 @@ function App() {
       {/* End of ontext */}
 
       {/* Effect */}
-      <h2 className="text-primary">Effect </h2>
+      <h2 className="text-success">Effect </h2>
       <Timer />
       {/* End of Effect */}
+
+      <hr/>
+      {/* UseRef */}
+      <h2 className="text-success">UseRef </h2>
+      <UseRef/>
+      {/* End of UseRef */}
+
     </div>
 
   );
