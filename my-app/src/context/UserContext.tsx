@@ -5,6 +5,11 @@ type AuthUser = {
   email: string
 }
 
+const users = {
+  name: 'ram',
+  email: 'ram@gmail.com'
+}
+
 type UserContextType = {
   user: AuthUser | null
   setUser: React.Dispatch<React.SetStateAction<AuthUser | null>>
@@ -18,7 +23,8 @@ type UserContextProviderProps = {
 export const UserContext = createContext({} as UserContextType)
 
 export const UserContextProvider = ({ children }: UserContextProviderProps) => {
-  const [user, setUser] = useState<AuthUser | null>(null)
+  const [user, setUser] = useState<AuthUser | null>(users)
+  console.log("user userContext",user)
   return (
     <UserContext.Provider value={{ user, setUser }}>
       {children}

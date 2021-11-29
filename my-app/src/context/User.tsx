@@ -4,12 +4,14 @@ import { UserContext } from './UserContext'
 
 export const User = () => {
   const userContext = useContext(UserContext)
+  console.log("user in user.tsx",userContext.user)
   const handleLogin = () => {
     // if (userContext) {
     userContext.setUser({
       name: 'Vishwajit',
       email: 'vishwajit@gmail.com'
     })
+
 
     // }
   }
@@ -25,7 +27,7 @@ export const User = () => {
         <button type="button" className="btn btn-outline-primary"
           onClick={handleLogin}
         >
-          Login
+          Login as vishwajit
         </button>
       </div>
       <div className="d-inline-flex p-4">
@@ -33,7 +35,7 @@ export const User = () => {
           onClick={handleLogout}
           disabled={!userContext.user}
         >
-          Logout
+          Reset
         </button>
       </div>
 
