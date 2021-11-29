@@ -6,6 +6,7 @@ import { Timer } from './effect/Timer';
 import { GenericMain } from './generics/GenericMain';
 import { PropsMain } from './props/PropsMain';
 import { UseRef } from './useRef/UseRef';
+import UseStateHook from './useState/UseStateHook';
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
     <div className="App">
       <GenericMain />
       <hr />
+
       <PropsMain />
-      <hr />
+      <hr />  
      
       {/* Context */}
       <h2 className="text-success">Context </h2>
@@ -25,12 +27,21 @@ function App() {
       <hr />
       {/* End of ontext */}
      
+    
       {/* Effect */}
       <h2 className="text-success">Effect </h2>
       <Timer />
       {/* End of Effect */}
 
       <hr />
+
+       {/* UseStateHook */}
+       <h2 className="text-success">UseStateHook </h2>
+      <UseStateHook />
+      {/* End of UseStateHook */}
+
+      <hr />
+
       {/* UseRef */}
       <h2 className="text-success">UseRef </h2>
       <UseRef />
