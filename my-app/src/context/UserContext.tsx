@@ -7,7 +7,7 @@ type AuthUser = {
 
 const users = {
   name: 'ram',
-  email: 'ram@gmail.com'
+  email:'ram@gmail.com'
 }
 
 type UserContextType = {
